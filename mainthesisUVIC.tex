@@ -1,6 +1,8 @@
 \documentclass[12pt,oneside]{book}
 \include{macros/style}
 \include{macros/use_packages}
+%\usepackage{hyperref}%not an option atm <todo> fix later
+% URL :  http://stackoverflow.com/questions/2894710/writing-urls-in-latex
 
 \begin{document}
 
@@ -9,14 +11,14 @@
 
 \newpage
 
-	\include{chapters/1/chapter_intro}
-	\include{chapters/2/chapter_problem}
-	\include{chapters/3/chapter_new}
-	\include{chapters/4/chapter_experiments}
-	\include{chapters/5/chapter_evaluation}
-	\include{chapters/6/chapter_conclusion}
-	\appendix
-	\include{chapters/appendix/chapter_app}
+  \include{chapters/1/chapter_intro}
+  \include{chapters/2/chapter_problem}
+  \include{chapters/3/chapter_new}
+  \include{chapters/4/chapter_experiments}
+  \include{chapters/5/chapter_evaluation}
+  \include{chapters/6/chapter_conclusion}
+  \appendix
+  \include{chapters/appendix/chapter_app}
 
 % The style of bibliography exemplified here is the "plain",
 % normally used in science theses. This is shown
@@ -28,8 +30,8 @@
 % The Bibliography file is a BibTex file named
 % UVicThesis.bib and called below
 
-	\TOCadd{Bibliography}
-	\bibliographystyle{plain}
-	\bibliography{UvicThesis}
+  \TOCadd{Bibliography}
+  \bibliographystyle{plain}
+  \bibliography{UvicThesis}
 
 \end{document}

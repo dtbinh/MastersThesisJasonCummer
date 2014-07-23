@@ -129,7 +129,7 @@ their thoughts.
 
 Affective states are detected by general frequency [ ref ] of the electrical activity detected by the electrodes. The specific powers of the frequency bands have been identified and correlated with specific affective. affective states that can be detected are engagment, instantaneous excitement and long term excitement[epoc manual].
 Many of the electrodes, especially thoughts nearest the face, receive large changes in voltage when the muscles of the face activate. These voltage changes are used to sense the facial muscles, from this the expression of the user is classified and thus the expressive state of a user.
-The EPOC’s two dimensional gyroscope allows for the position of the users head to be used as input as well. The most used controls linked to the gyro are used for head position tracking or mouse control.
+The EPOCï¿½s two dimensional gyroscope allows for the position of the users head to be used as input as well. The most used controls linked to the gyro are used for head position tracking or mouse control.
 The EPOC headset also has built in wireless communication with the host computer. This allows for more freedom when the user or subject is wearing the headset as there are no wires to hinder them.
 
 The procedure to use the Emotiv EPOC is as follows.
@@ -159,11 +159,16 @@ HOw the FielLE wAS saaaved?binary vs txt
 For a test of data mining with WEKA and its built in neural networks, we attempted to correlate the EEG data with the direction the mouse was moving. I used the data of the mouse position and found the cardinal and intercardinal directions of the movement. To find these directions the deltas for the x and the y were found. The arctan function was used to get a measure of the angle of the vector the deltas formed. The angle of the vector was then rounded to the nearest cardinal and intercardinal direction of the compas. The rounding was done based on the division of the circle in to 22.5Degree segments.  
     The deltas that were chosen, were based on the amount of time the mouse was moving. This time was related the time between line writes in the data. If the mouse had not moved in 30 lines of data then a mouse movement was considered to have stopped. If the data for a detected mouse movement was very long I decided to stop it at 188 lines as most of the movements examined in the raw data were smaller than this number of lines.
 
-The second of data before the mouse movement started  used for training the WEKA neural network. The reason for this is based on studies from Benjamin Libet’s work in the 1970s.
+The second of data before the mouse movement started  used for training the WEKA neural network. The reason for this is based on studies from Benjamin Libetï¿½s work in the 1970s.
 Libet used EEGs for his experiments, his subjects wore then will they were told to press a button or extend a finger. Libet also told them to watch a timer, when his subjects became aware they wanted to press the button or extend a finger they were to note the time. This allowed the the researchers to look at the EEG for a signal that would correlate with the button press. After analysis Libet found that the participant reported the urge to act at 200 milliseconds(ms) before the button press, with a margin of error of 50 ms. The EEG showed that there was a rising potential 500ms before the button press. This means that there were 300 ms before the execution of the action that the brain showed signs of initiation of the action. This means that after a about a third of a second the user becomes aware of an action that the could execute. 
-Daniel Dennett’s comment was “ the action originally  precipitated  in some some part of the brain, and off fly the signals to muscles, pausing en route to tell you , the conscious agent what is going on “. More modern fMRI studies show similar findings with regions of the brain activating before the action was executed[ ref ]. 
+Daniel Dennettï¿½s comment was ï¿½ the action originally  precipitated  in some some part of the brain, and off fly the signals to muscles, pausing en route to tell you , the conscious agent what is going on ï¿½. More modern fMRI studies show similar findings with regions of the brain activating before the action was executed[ ref ]. 
 
 IMAGE FOR LIBETS EXPERIMENT
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth,natwidth=632,natheight=281]{./Figures/LibetExperiment.png}
+\caption{LibetExperiment}
+\end{figure}
 
 [ ref ][ ref ]
 With the fact that there is measurable data from an EEG to discern that movements are coming it would be a minimal feature to look for in the data from the EPOC.
@@ -200,7 +205,7 @@ IMAGE OF CORTICAL COLUMN
 Information processing in animals is done with networks of neurons. In vertebrates its done in large networks of neurons called brains. Humans have an advanced brain capable of simulating the environment and planning for the long term future. 
 
 What is the brain
-    The brain is a approximately 1.5kg mass of information processing and support cells. The brain is composed of many different structures. Cerebellum is a largely repetitive structure primarily used for motor learning and fine control located at the base of the brain. Brainstem consists of a few sub regions. At the top of the spinal cord is the Medulla oblongata which contains many of the automatic functions to maintain homeostasis such as heart rate, and breathing . Above the medulla is the Pons which has white matter tracts to move information to and from the body. The pons also has some regulatory functions such as helping control the muscles of the face, eyes and throat, equilibrium, hearing and taste and facial sensations. The last region in the brain stem is midbrain “ vision, hearing, motor control, sleep/wake, arousal (alertness), and temperature regulation.[2]”. 
+    The brain is a approximately 1.5kg mass of information processing and support cells. The brain is composed of many different structures. Cerebellum is a largely repetitive structure primarily used for motor learning and fine control located at the base of the brain. Brainstem consists of a few sub regions. At the top of the spinal cord is the Medulla oblongata which contains many of the automatic functions to maintain homeostasis such as heart rate, and breathing . Above the medulla is the Pons which has white matter tracts to move information to and from the body. The pons also has some regulatory functions such as helping control the muscles of the face, eyes and throat, equilibrium, hearing and taste and facial sensations. The last region in the brain stem is midbrain ï¿½ vision, hearing, motor control, sleep/wake, arousal (alertness), and temperature regulation.[2]ï¿½. 
 
 The Thalamus is a region of the brain above the brainstem.
 Limbic .
@@ -209,6 +214,11 @@ The Cerebral cortex is divided into four main lobes. The occipital, parietal, te
 White matter .
 Grey matter .
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.4\textwidth,natwidth=535,natheight=308]{./Figures/Neuron.jpg}
+\caption{Basic neuron}
+\end{figure}
 IMAGE OF NEURON
 
 The brain is made up of two types of cells Glia and Neurons are the main cells of the brain. Neurons are the main information processing units of the brain, with glia being an important partner cell to neurons. As they help to maintain the environment for neurons and help regulate synaptic connections. Neurons have some specializations that allow them to process information and pass the new information to any neurons that are connected to them. The specializations are the Axon and Dendrites. Axons are extensions from the Soma starting at the axon hillock.There primary purpose is to carry an action potential to the synaptic boutons. Action potentials will be discussed in more detail below. The axons can be myelinated or not by special glia. If they are myelinated they have a better conduction speed. This is due to the ability of the myelin to allow the voltage to be transmitted via saltatory conduction. The action potential is thus conducted past the section of the axon that is myelinated and to a section of the axon that is not myelinated. This unmyelinated section is called a node of Ranvier. At nodes of Ranvier the action potential is regenerated via the ion channels present in the cell membrane. If there are the axons are entirely non myelinated then the action potential is entirely transmitted with ion channels. 
